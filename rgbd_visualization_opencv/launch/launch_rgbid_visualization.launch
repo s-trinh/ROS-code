@@ -1,0 +1,18 @@
+<!-- -*- xml -*- -->
+<launch>
+  <!-- Parameters -->
+
+  <!-- Remap topic -->
+  <remap from="/camera/color" to="/camera/rgb/image_raw"/>
+  <remap from="/camera/ir" to="/camera/ir/image_raw"/>
+  <remap from="/camera/depth" to="/camera/depth/image_raw"/>
+  <remap from="/camera/pointcloud" to="/camera/depth/points"/>
+
+  <!-- Type is the file you want to launch in the package whereas the name is a unique identifier for your node. -->
+  <!-- Launch the camera acquisition -->
+  
+  <!-- Launch Visualization -->
+  <node pkg="rgbd_visualization_opencv" type="rgbid_visualization_opencv" name="rgbid_visualization_opencv_node" output="screen">
+  </node>
+ 
+</launch>
